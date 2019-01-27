@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://art/playerGrey_walk1.png" type="Texture" id=2]
@@ -26,6 +26,17 @@ _sections_unfolded = [ "Resource" ]
 custom_solver_bias = 0.0
 radius = 27.485
 height = 12.4722
+
+[sub_resource type="Gradient" id=6]
+
+offsets = PoolRealArray( 0.260355, 1 )
+colors = PoolColorArray( 0.953125, 0.878662, 0.878662, 1, 0.457031, 0.044632, 0.044632, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+
+flags = 4
+gradient = SubResource( 6 )
+width = 2048
 
 [sub_resource type="Curve" id=3]
 
@@ -70,7 +81,7 @@ angle_random = 0.0
 scale = 1.0
 scale_random = 0.0
 scale_curve = SubResource( 4 )
-color = Color( 1, 1, 1, 1 )
+color_ramp = SubResource( 7 )
 hue_variation = 0.0
 hue_variation_random = 0.0
 anim_speed = 0.0
@@ -78,7 +89,7 @@ anim_speed_random = 0.0
 anim_offset = 0.0
 anim_offset_random = 0.0
 anim_loop = false
-_sections_unfolded = [ "Gravity" ]
+_sections_unfolded = [ "Color", "Gravity", "Scale" ]
 
 [node name="Player" type="Area2D" index="0"]
 
